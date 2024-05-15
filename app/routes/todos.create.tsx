@@ -36,28 +36,50 @@ const CreateTodo: FC = () => {
   const errors = useActionData<typeof action>();
   return (
     <>
-      <h2>新規追加画面</h2>
+      <h2 className="font-medium text-3xl">新規追加画面</h2>
       <Form method="post">
-        <div>
-          <label>
-            タイトル：
-            {errors?.title ? (
-              <p style={{ color: "red" }}>{errors.title}</p>
-            ) : null}
-            <input type="text" name="title" />
+        <div className="py-2">
+          <label className="text-sm text-gray-700 block mb-1 font-medium py-2">
+            タイトル
           </label>
+          <input
+            type="text"
+            name="title"
+            className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+            placeholder="タイトルを入力してください"
+          />
+          {errors?.title ? (
+            <div className="py-2 bg-white text-red-500 justify-between rounded">
+              <div className="flex items-center">
+                <p>{errors?.title}</p>
+              </div>
+            </div>
+          ) : null}
+        </div>
+        <div className="py-2">
+          <label className="text-sm text-gray-700 block mb-1 font-medium py-2">
+            期限
+          </label>
+          <input
+            type="date"
+            name="deadline"
+            className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+          />
+          {errors?.deadline ? (
+            <div className="py-2 bg-white text-red-500 justify-between rounded">
+              <div className="flex items-center">
+                <p>{errors?.deadline}</p>
+              </div>
+            </div>
+          ) : null}
         </div>
         <div>
-          <label>
-            期限：
-            {errors?.deadline ? (
-              <p style={{ color: "red" }}>{errors.deadline}</p>
-            ) : null}
-            <input type="date" name="deadline" />
-          </label>
-        </div>
-        <div>
-          <button type="submit">登録</button>
+          <button
+            type="submit"
+            className="py-1.5 px-4 mt-16 flex items-center space-x-2 transition-colors bg-green-600 border active:bg-green-800 font-medium border-green-700 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
+          >
+            登録
+          </button>
         </div>
       </Form>
     </>
