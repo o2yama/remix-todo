@@ -7,6 +7,7 @@ import {
 import { Form, useActionData, useLoaderData } from "@remix-run/react";
 import { FC } from "react";
 import invariant from "tiny-invariant";
+
 import { getTodo, updateTodo } from "~/models/todo.server";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {

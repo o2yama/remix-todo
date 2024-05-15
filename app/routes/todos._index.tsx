@@ -1,6 +1,6 @@
-import { Todo } from "@prisma/client";
 import { Form, json, Link, useLoaderData } from "@remix-run/react";
 import { FC } from "react";
+
 import { getTodos } from "~/models/todo.server";
 
 export const loader = async () => {
@@ -37,9 +37,9 @@ const Todos: FC = () => {
             fill="currentColor"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             />
           </svg>
           <div>追加</div>
@@ -79,7 +79,7 @@ const Todos: FC = () => {
                     height="20"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
                     ></path>
                   </svg>
