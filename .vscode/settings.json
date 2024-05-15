@@ -1,0 +1,6 @@
+{
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.includeSingleLineSymbols": false,
+  "gitlens.codeLens.authors.enabled": true,
+  "cSpell.words": ["Todos"]
+}
