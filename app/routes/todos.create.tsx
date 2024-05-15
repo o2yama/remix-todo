@@ -40,10 +40,14 @@ const CreateTodo: FC = () => {
       <h2 className="font-medium text-3xl">新規追加画面</h2>
       <Form method="post">
         <div className="py-2">
-          <label className="text-sm text-gray-700 block mb-1 font-medium py-2">
+          <label
+            htmlFor="title"
+            className="text-sm text-gray-700 block mb-1 font-medium py-2"
+          >
             タイトル
           </label>
           <input
+            id="title"
             type="text"
             name="title"
             className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
@@ -58,10 +62,14 @@ const CreateTodo: FC = () => {
           ) : null}
         </div>
         <div className="py-2">
-          <label className="text-sm text-gray-700 block mb-1 font-medium py-2">
+          <label
+            htmlFor="deadline"
+            className="text-sm text-gray-700 block mb-1 font-medium py-2"
+          >
             期限
           </label>
           <input
+            id="deadline"
             type="date"
             name="deadline"
             className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
